@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "Italic Bold lol";
+  src: url(../public/fontes/BeaufortforLOL-BoldItalic.ttf) format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Italic Heavy lol";
+  src: url(../public/fontes/BeaufortforLOL-HeavyItalic.ttf) format("truetype");
+  font-weight: heavy;
+  font-style: italic;
+}
+
+header {
+  background-color: black;
+  width: 100vw;
+}
+
+.logo {
+  max-width: 12vw;
+  margin-left: 16px;
+  padding: 6px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  background-color: #172037;
+  min-width: 100vw;
+  min-height: 100vh;
+  margin-left: 0;
+}
+
+.card {
+  margin-top: 3%;
+  width: 250px;
+  height: 320px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: #6a2c70;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 24px;
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  background-color: #18264c;
+  font-family: Italic Bold lol;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: justify;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 11px;
+  transform: rotateY(180deg);
+}
+
+#heimer {
+  font-size: 32px;
+}
+
+.cardtile {
+  display: flex;
+  padding: 10px;
+  gap: 5px;
+}
+.cardtitle h1 {
+  font-size: 48px;
+  font-family: Italic Heavy lol;
+  margin: 0;
+  color: #ffff;
+}
+.cardtitle h2 {
+  font-size: 18px;
+  margin: 0;
+  color: #c8aa6e;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .card-img {
+    background-image: url("../public/assets/Aatrox_21.jpg");
+  }
+}
